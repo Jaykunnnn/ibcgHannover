@@ -1,0 +1,36 @@
+/* 1. Reset & General Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+/* 2. Hover Dropdown Logic */
+/* We use min-width: 768px so hover only works on Desktop, not Mobile */
+@media (min-width: 768px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Prevents the menu from closing if there's a small gap */
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* 3. Dropdown Appearance & Animation */
+.dropdown-menu {
+    display: block; /* We control visibility via opacity for smoother effects */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px); /* Starts slightly lower for a "slide up" effect */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 4. Carousel Customization (Optional) */
+.carousel-item img {
+    height: 500px; /* Force a consistent height for your church images */
+    object-fit: cover; /* Prevents images from looking squashed */
+}
