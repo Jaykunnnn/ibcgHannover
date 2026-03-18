@@ -34,3 +34,26 @@ body {
     height: 500px; /* Force a consistent height for your church images */
     object-fit: cover; /* Prevents images from looking squashed */
 }
+
+.accordion-button::after {
+    filter: invert(1); /* makes arrow white */
+}
+
+.accordion-button:not(.collapsed) {
+    color: #d4a24c; /* gold when open */
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
